@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1677774164756" clover="3.2.0">
-  <project timestamp="1677774164756" name="All files">
+<coverage generated="1677775187513" clover="3.2.0">
+  <project timestamp="1677775187513" name="All files">
     <metrics statements="53" coveredstatements="51" conditionals="23" coveredconditionals="22" methods="4" coveredmethods="4" elements="80" coveredelements="77" complexity="0" loc="53" ncloc="53" packages="1" files="2" classes="2"/>
-    <file name="app.js" path="/Users/armen/Documents/coding/AngularApps/bunk-dev-test/api/app.js">
+    <file name="app.js" path="/Users/armen/Documents/coding/AngularApps/bunk-test/api/app.js">
       <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <line num="5" count="1" type="stmt"/>
       <line num="8" count="1" type="stmt"/>
@@ -14,7 +14,7 @@
       <line num="19" count="7" type="stmt"/>
       <line num="21" count="7" type="stmt"/>
     </file>
-    <file name="lib.js" path="/Users/armen/Documents/coding/AngularApps/bunk-dev-test/api/lib.js">
+    <file name="lib.js" path="/Users/armen/Documents/coding/AngularApps/bunk-test/api/lib.js">
       <metrics statements="44" coveredstatements="42" conditionals="21" coveredconditionals="20" methods="3" coveredmethods="3"/>
       <line num="14" count="8" type="stmt"/>
       <line num="16" count="8" type="cond" truecount="5" falsecount="0"/>
