@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1677774164756" clover="3.2.0">
+  <project timestamp="1677774164756" name="All files">
+    <metrics statements="53" coveredstatements="51" conditionals="23" coveredconditionals="22" methods="4" coveredmethods="4" elements="80" coveredelements="77" complexity="0" loc="53" ncloc="53" packages="1" files="2" classes="2"/>
+    <file name="app.js" path="/Users/armen/Documents/coding/AngularApps/bunk-dev-test/api/app.js">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="19" count="7" type="stmt"/>
+      <line num="21" count="7" type="stmt"/>
+    </file>
+    <file name="lib.js" path="/Users/armen/Documents/coding/AngularApps/bunk-dev-test/api/lib.js">
+      <metrics statements="44" coveredstatements="42" conditionals="21" coveredconditionals="20" methods="3" coveredmethods="3"/>
+      <line num="14" count="8" type="stmt"/>
+      <line num="16" count="8" type="cond" truecount="5" falsecount="0"/>
+      <line num="17" count="4" type="stmt"/>
+      <line num="18" count="4" type="stmt"/>
+      <line num="20" count="4" type="stmt"/>
+      <line num="23" count="4" type="stmt"/>
+      <line num="24" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="27" count="9" type="stmt"/>
+      <line num="30" count="11" type="stmt"/>
+      <line num="34" count="4" type="stmt"/>
+      <line num="37" count="4" type="stmt"/>
+      <line num="39" count="4" type="stmt"/>
+      <line num="40" count="4" type="stmt"/>
+      <line num="43" count="4" type="stmt"/>
+      <line num="45" count="4" type="stmt"/>
+      <line num="46" count="4" type="stmt"/>
+      <line num="47" count="4" type="stmt"/>
+      <line num="49" count="5" type="stmt"/>
+      <line num="50" count="5" type="cond" truecount="1" falsecount="1"/>
+      <line num="51" count="0" type="stmt"/>
+      <line num="52" count="0" type="stmt"/>
+      <line num="55" count="5" type="stmt"/>
+      <line num="57" count="13" type="cond" truecount="2" falsecount="0"/>
+      <line num="58" count="8" type="stmt"/>
+      <line num="62" count="5" type="stmt"/>
+      <line num="65" count="5" type="stmt"/>
+      <line num="66" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="67" count="4" type="stmt"/>
+      <line num="70" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="72" count="5" type="stmt"/>
+      <line num="76" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="77" count="4" type="stmt"/>
+      <line num="83" count="4" type="stmt"/>
+      <line num="84" count="4" type="stmt"/>
+      <line num="86" count="1" type="stmt"/>
+      <line num="92" count="1" type="stmt"/>
+      <line num="93" count="1" type="stmt"/>
+      <line num="96" count="5" type="stmt"/>
+      <line num="103" count="13" type="stmt"/>
+      <line num="104" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="105" count="4" type="stmt"/>
+      <line num="109" count="4" type="stmt"/>
+      <line num="112" count="8" type="stmt"/>
+    </file>
+  </project>
+</coverage>

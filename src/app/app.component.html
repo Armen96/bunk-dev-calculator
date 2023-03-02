@@ -1,0 +1,105 @@
+<div class="main-container">
+  <div class="add-member-section">
+    <h2 id="add-member-title">Add Member</h2>
+
+    <form class="inputs" [formGroup]="memberForm">
+      <div class="member-data">
+        <div class="member-input">
+          <mat-form-field appearance="outline" class="example-form-field">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" required formControlName="name">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="example-form-field">
+            <mat-label>Amount</mat-label>
+            <input matInput type="number" required formControlName="amount" min="0">
+          </mat-form-field>
+        </div>
+
+        <div class="add-button">
+          <button id="add-new-member-btn" mat-raised-button color="primary" [disabled]="memberForm.invalid" (click)="addMember()">
+            Add
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="member-list-section">
+    <h2 id="member-list-title">Member List</h2>
+
+    <div class="member-list" *ngIf="dataSource && dataSource.length; else noMembersAvailable">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Amount Column -->
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef> Amount </th>
+          <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <div class="settle-up">
+        <button id="settle-up-btn" mat-raised-button color="primary" (click)="settleUp()">Settle Up</button>
+      </div>
+    </div>
+
+    <ng-template #noMembersAvailable>
+      <span>No Members Available</span>
+    </ng-template>
+
+    <div class="loading" *ngIf="isLoading">
+      <mat-progress-bar mode="query"></mat-progress-bar>
+    </div>
+  </div>
+
+
+  <div class="member-list-section m-t-30" *ngIf="expensesData">
+    <h2 id="holiday-expenses-calculation-title">Holiday Expenses Calculation</h2>
+
+    <div class="total-results">
+      <p id="total-value">Total: {{expensesData.total}}</p>
+      <p id="equal-share-value">Equal Share: {{expensesData.equalShare}}</p>
+    </div>
+
+    <div class="member-list" *ngIf="expensesData.payouts.length; else noPayoutsAvailable">
+      <table mat-table [dataSource]="expensesData.payouts" class="mat-elevation-z8">
+        <!-- Owes Column -->
+        <ng-container matColumnDef="owes">
+          <th mat-header-cell *matHeaderCellDef> Owes </th>
+          <td mat-cell *matCellDef="let element"> {{element.owes}} </td>
+        </ng-container>
+
+        <!-- Owed Column -->
+        <ng-container matColumnDef="owed">
+          <th mat-header-cell *matHeaderCellDef> Owed </th>
+          <td mat-cell *matCellDef="let element"> {{element.owed}} </td>
+        </ng-container>
+
+        <!-- Amount Column -->
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef> Amount </th>
+          <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedPayoutColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedPayoutColumns;"></tr>
+      </table>
+
+      <div class="settle-up">
+        <button id="reset-btn" mat-raised-button color="warn" (click)="reset()">Reset</button>
+      </div>
+    </div>
+
+    <ng-template #noPayoutsAvailable>
+      <span>No Payouts Available</span>
+    </ng-template>
+  </div>
+</div>
