@@ -75,6 +75,20 @@ describe("POST /payouts", () => {
       const response = await request(app).post("/payouts").send(bodyData)
       const body = response.body;
 
+      expect(body).toEqual(
+        expect.objectContaining({
+          total: expect.any(Number),
+          equalShare: expect.any(Number),
+          payouts: expect.arrayContaining([
+            expect.objectContaining({
+              owes: expect.any(String),
+              owed: expect.any(String),
+              amount: expect.any(Number)
+            })
+          ]),
+        })
+      );
+
       expect(body.total).toBe(23.5);
       expect(body.equalShare).toBe(11.75);
       expect(body.payouts.length).toBe(1);
